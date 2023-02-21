@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+class Calculator
+{
+  public:
+
+  int Sum(int first, int second);
+};
+
+int Calculator::Sum(int first, int second)
+{
+  int sum =first + second;
+  return sum;
+}
+class Printer
+{
+// 3 int variable for store 2 number and it's sum
+public:
+int total,a,b;
+
+// print method which ask user to enter 2 number and then return its sum
+void Print()
+{
+// asking for two numbers from user
+cout<<"Give a first integer: ";
+cin>>a;
+cout<<"Give a second integer: ";
+cin>>b;
+// create an instance of the Calculator class to use their sum method
+Calculator c;
+// call Sum method and then store it into total
+c.Sum(a,b);
+// print the total of given numbers
+cout<<"Sum: "<<c.Sum(a,b);
+}
+};
+int main()
+{  
+  Printer object;
+  object.Print();
+} 
